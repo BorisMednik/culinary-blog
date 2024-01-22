@@ -1,31 +1,24 @@
-import card_style from './card_style.css'
-import { Link } from 'react-router-dom'
+import card_style from "./card_style.css";
+import { Link } from "react-router-dom";
 
-
-
- const Card = (props) => {
-
-    const style = {
-        bacground:props.image,
-
-    }
-    return     (
-        <>
-         <Link to ={props.link}> 
+const Card = ({ profile }) => {
+  const style = {
+    bacground: profile.image,
+  };
+  return (
+    <>
+      <Link to={profile.link}>
         <div className="card">
-            <div className="img" style={style}>
-                 <img src={props.image} alt={props.name} />  
-            </div>
-            <div className="text_box">
-            
-           
-              <span>{props.name}</span>
-               
-            </div>
+          <div className="img" style={style}>
+            <img src={profile.image} alt={profile.name} />
+          </div>
+          <div className="text_box">
+            <span>{profile.name}</span>
+          </div>
         </div>
-        </Link> 
-        </>
-    )
-} 
+      </Link>
+    </>
+  );
+};
 
-export default Card
+export default Card;
