@@ -1,4 +1,4 @@
-import { Link } from "./react-router-dom";
+import { Link } from "react-router-dom";
 
 import rest_card_style from "./rest_card_style.css";
 
@@ -6,12 +6,12 @@ const Rest_Card = ({ profile }) => {
   const style = {
     bacground: profile.image,
   };
-  const link = "/{id}/Restoran";
+  const link = `/Restoran/${profile.id}/`;
   return (
     <Link to={link}>
       <div className="Card">
         <div className="photo" style={style}>
-          <img src={profile.image} alt={profile.name} />
+          <img src={profile.image} alt={profile.id} />
         </div>
         <div className="profile">
           <div className="name">
