@@ -1,17 +1,43 @@
-const Rest_card = () => {
+import { Link } from "./react-router-dom";
+
+import rest_card_style from "./rest_card_style.css";
+
+const Rest_Card = ({ profile }) => {
+  const style = {
+    bacground: profile.image,
+  };
+  const link = "/{id}/Restoran";
   return (
-    <div className="Card">
-      <div className="photo"></div>
-      <div className="profile">
-        <div className="name"></div>
-        <div className="desc"></div>
-        <div className="info">
-          <div className="tel"></div>
-          <div className="check"></div>
-          <div className="worktime"></div>
+    <Link to={link}>
+      <div className="Card">
+        <div className="photo" style={style}>
+          <img src={profile.image} alt={profile.name} />
+        </div>
+        <div className="profile">
+          <div className="name">
+            <h1>{profile.name}</h1>
+          </div>
+          <div className="desc">
+            <p>{profile.disc}</p>
+          </div>
+          <div className="info">
+            <div className="tel info-block">
+              <h4>телефон</h4>
+              <span>{profile.phone}</span>
+            </div>
+            <div className="check info-block">
+              <h4>средний чек</h4>
+              <span>{profile.price}</span>
+            </div>
+            <div className="worktime info-block">
+              {" "}
+              <h4>время работы</h4>
+              <span>{profile.worktime}</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
-export default Rest_card;
+export default Rest_Card;

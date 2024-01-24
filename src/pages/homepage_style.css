@@ -1,11 +1,5 @@
-
-
-.card_box
-{
-    width: 80%;
-    height: 800px;
-    display: flex;
-    
- 
-
+.card_box {
+  width: 80%;
+  height: 800px;
+  display: block;
 }
