@@ -1,6 +1,6 @@
 import homepage_style from "../pages/homepage_style.css";
 import Card from "../components/card";
-import Rest_Card from "../components/rest_card";
+import RestCard from "../components/rest_card";
 /* import {Link} from "react-router-dom" */
 
 /* const Profiles = [
@@ -31,11 +31,12 @@ import Rest_Card from "../components/rest_card";
 ]; */
 
 const Homepage = ({ data }) => {
+  console.log("Homepage");
   return (
     <div className="card_box">
-      {data.map((profile, index) => (
-        <div key={index}>
-          <Rest_Card
+      {data.map((profile, ID) => (
+        <div key={ID}>
+          <RestCard
             profile={profile}
             /*   image = {profile.image}
                    name = {profile.name}

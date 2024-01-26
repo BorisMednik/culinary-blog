@@ -1,14 +1,16 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+import restoran_style from "./restoran_style.css";
 
 const Restoran = ({ data }) => {
-  const { id } = useParams();
+  const { ID } = useParams();
 
   return (
     <>
       {data
-        .filter((profile) => profile.id === id)
-        .map((profile, index) => (
-          <div className="restik">
+        .filter((profile) => profile.id == ID)
+        .map((profile) => (
+          <div key={profile.id} className="restik">
             <div className="adress"></div>
             <div className="name">
               <h1>{profile.name}</h1>

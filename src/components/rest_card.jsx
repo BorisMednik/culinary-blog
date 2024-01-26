@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 import rest_card_style from "./rest_card_style.css";
 
-const Rest_Card = ({ profile }) => {
+const RestCard = ({ profile }) => {
   const style = {
     bacground: profile.image,
   };
-  const link = `/Restoran/${profile.id}/`;
+  const link = `/restoran/${profile.id}/`;
   return (
     <Link to={link}>
       <div className="Card">
@@ -30,7 +30,6 @@ const Rest_Card = ({ profile }) => {
               <span>{profile.price}</span>
             </div>
             <div className="worktime info-block">
-              {" "}
               <h4>время работы</h4>
               <span>{profile.worktime}</span>
             </div>
@@ -40,4 +39,4 @@ const Rest_Card = ({ profile }) => {
     </Link>
   );
 };
-export default Rest_Card;
+export default RestCard;

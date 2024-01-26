@@ -50,7 +50,7 @@ function App() {
           <Route path="/Nissan" element={<Nissan />} />
           <Route path="/Renault" element={<Renault />} />
           <Route path="/Volkswagen" element={<Volkswagen />} />
-          <Route path="/Restoran/:id" element={<Restoran data={Profiles} />} />
+          <Route path="/restoran/:ID" element={<Restoran data={Profiles} />} />
         </Route>
       </Routes>
     </BrowserRouter>
