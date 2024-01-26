@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import BButton from "../components/BackButton";
 
 import restoran_style from "./restoran_style.css";
 
@@ -11,6 +12,7 @@ const Restoran = ({ data }) => {
         .filter((profile) => profile.id == ID)
         .map((profile) => (
           <div key={profile.id} className="restik">
+            <BButton></BButton>
             <div className="adress"></div>
             <div className="name">
               <h1>{profile.name}</h1>
