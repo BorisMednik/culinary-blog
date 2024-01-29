@@ -2,13 +2,13 @@ version: "3.5"
 
 services:
   database:
-    image: postres
+    image: postgres
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: postres
-      POSTGRES_PASSWORD: postres
-      POSTGRES_DB: postres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
 
   pgadmin:
     image: dpage/pgadmin4
@@ -16,5 +16,5 @@ services:
       - 80:80
     environment:
       PGADMIN_DEFAULT_EMAIL: postres@mail.ru
-      PGADMIN_DEFAULT_PASSWORD: postres
+      PGADMIN_DEFAULT_PASSWORD: postgres
       PGADMIN_CONFIG_SERVER_MODE: "False"
