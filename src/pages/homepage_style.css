@@ -3,3 +3,12 @@
   height: 800px;
   display: block;
 }
+.container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 10% 2%;
+
+  box-sizing: border-box;
+}

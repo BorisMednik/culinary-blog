@@ -18,7 +18,7 @@ const RestCard = ({ profile }) => {
             <h1>{profile.name}</h1>
           </div>
           <div className="desc">
-            <p>{profile.disc}</p>
+            <p>{profile.description}</p>
           </div>
           <div className="info">
             <div className="tel info-block">

@@ -1,6 +1,7 @@
 import homepage_style from "../pages/homepage_style.css";
 import Card from "../components/card";
 import RestCard from "../components/rest_card";
+import SearchLine from "../components/searchline";
 /* import {Link} from "react-router-dom" */
 
 /* const Profiles = [
@@ -33,17 +34,19 @@ import RestCard from "../components/rest_card";
 const Homepage = ({ data }) => {
   console.log("Homepage");
   return (
-    <div className="card_box">
-      {data.map((profile, ID) => (
-        <div key={ID}>
-          <RestCard
-            profile={profile}
-            /*   image = {profile.image}
-                   name = {profile.name}
-                   link = {profile.link} */
-          />
-        </div>
-      ))}
+    <div className="container">
+      <SearchLine Profiles={data} />
+
+      {/*    <div className="card_box">
+        {data.map((profile, ID) => (
+          <div key={ID}>
+            <RestCard
+              profile={profile}
+         
+            />
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 };

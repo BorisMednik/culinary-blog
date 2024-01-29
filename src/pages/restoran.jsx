@@ -22,7 +22,7 @@ const Restoran = ({ data }) => {
               <img src={profile.image} alt={profile.id} />
             </div>
             <div className="disc">
-              <p>{profile.disc}</p>
+              <p>{profile.description}</p>
             </div>
             <div className="info">
               <div className="tel">
