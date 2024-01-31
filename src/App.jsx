@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Profiles } from "./api/restorants";
+import { Profiles } from "./api/data";
 
 import Nissan from "./pages/Nissan";
 import Renault from "./pages/Renault";
 import Volkswagen from "./pages/Volkswagen";
 import Homepage from "./pages/homepage";
 import Layout from "./components/Layout";
-import Restoran from "./pages/restoran";
+
 /* import NAV from "./components/nav"; */
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
           <Route path="/Nissan" element={<Nissan />} />
           <Route path="/Renault" element={<Renault />} />
           <Route path="/Volkswagen" element={<Volkswagen />} />
-          <Route path="/restoran/:ID" element={<Restoran data={Profiles} />} />
         </Route>
       </Routes>
     </BrowserRouter>
